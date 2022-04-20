@@ -20,6 +20,10 @@
         <td><%= menu.price %></td>
         <td><%= link_to "Show", menu %></td>
         <td><%= link_to "Edit", edit_menu_path(menu) %></td>
+        <td><%= link_to "Delete", menu_path(menu), data:{
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure?"
+        } %></td>
       </tr>
     <% end %>
   </tbody>
