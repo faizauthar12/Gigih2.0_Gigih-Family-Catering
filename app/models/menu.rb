@@ -1,4 +1,9 @@
 class Menu < ApplicationRecord
+    # Relation
+    has_many :item_categories
+    has_many :menu, through: :item_categories
+
+    # Validation
     validates :name, presence: true, uniqueness: true
     validates :description, length: {
         maximum: 150 # Description is too long (maximum is 150 characters)
