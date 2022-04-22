@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
   before_action :set_menu, only: %i[ show edit update destroy ]
+  before_action :set_categories_array, only: %i[ edit update new create ]
 
   # GET /menus or /menus.json
   def index
@@ -65,6 +66,10 @@ class MenusController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def menu_params
-      params.require(:menu).permit(:name, :description, :price)
+      params.require(:menu).permit(:name, :description, :price, :category_ids => [])
+    end
+
+    def set_categories_array
+      @categories = Category.all
     end
 end
