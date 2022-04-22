@@ -9,6 +9,7 @@
         <td><b>Name</b></td>
         <td><b>Description</b></td>
         <td><b>Price</b></td>
+        <td><b>Category</b></td>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,9 @@
         <td><%= menu.name %></td>
         <td><%= menu.description %></td>
         <td><%= menu.price %></td>
+        <% menu.categories.sort_by(&:name).each do |category| %>
+        <td><%= category.name %></td>
+        <% end %>
         <td><%= link_to "Show", menu %></td>
         <td><%= link_to "Edit", edit_menu_path(menu) %></td>
         <td><%= link_to "Delete", menu_path(menu), data:{
