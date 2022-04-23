@@ -1,24 +1,27 @@
-# README
+# Gigih Family Catering
+## Description
+This is a Final Project Assignment repository for Generasi Gigih 2.0 Back-end Track. This project is a full-stack web app that manage catering management system using RoR 7. This project isn't fully completed.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# ERD
+![Project's ERD](.github/assets/erd.png)
 
-Things you may want to cover:
+# Project spec
+* Rails 7.0.2.3
+* Ruby 3 (3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux])
 
-* Ruby version
 
-* System dependencies
+## Getting Started
+### Steps to run this locally or on Replit
+```bash
+# install the required libraries and depenencies
+$ bundle install
 
-* Configuration
+# run the database migrations
+$ rails db:migrate
 
-* Database creation
+# populate some tables from the seeder
+$ rails db:seed
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# start the local server
+$ rails s
+```
